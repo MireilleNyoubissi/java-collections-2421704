@@ -11,15 +11,15 @@ public class ApplicationWithArrays {
 		Room piccadilly = new Room("Piccadilly", "Guest Room", 3, 125.00);
 		Room oxford = new Room("Oxford", "Suite", 5, 225.0);
 
-		Room[] rooms = null;
+		//Room[] rooms = null;
 				
-		
+		Collection<room> room = new ArrayList<>(List.of(cambridge, manchester, picadilly, oxford))
 		
 		
 		getPotentialRevenue(rooms);
 	}
 
-	private static double getPotentialRevenue(Room[] rooms) {
+	private static double getPotentialRevenue(Collection<room> rooms) {
 		return Arrays.stream(rooms)
 				.mapToDouble(r -> r.getRate())
 				.sum();
